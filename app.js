@@ -81,7 +81,7 @@ console.log(person);
 const todos =[
     {
         id: 1,
-        text: 'Take ot trash',
+        text: 'Take ou t trash',
         isCompleted: true
     },
     {
@@ -98,7 +98,7 @@ const todos =[
 
 /*console.log(todos[2].text);*/
 
-const todoJSON = JSON.stringify(todos);
+/*const todoJSON = JSON.stringify(todos);
 console.log(todoJSON);
 
 // For
@@ -111,4 +111,121 @@ let i=0;
 while(i<10) {
     console.log(`while loop Number: ${i}`);
     i++;
+}*/
+
+
+/*for(let todo of todos) {
+    console.log(todo.id);
+}*/
+
+// forEach, map, filter
+
+const todoText = todos.map(function(todo) {
+    return todo.text;
+})
+
+console.log(todoText);
+
+/*const todoCompleted = todos.filter(function(todo){
+    return todo.isCompleted === false;
+
+
+console.log(todoCompleted);*/
+
+const todoCompleted = todos.filter(function(todo){
+    return todo.isCompleted === true;
+}).map(function(todo){
+    return todo.text;
+})
+console.log(todoCompleted);
+
+/*let = 16 + 4 + "Volvo";
+console.log('Volvo')
+
+let Volvo;
+Volvo = 16 + 4 + "Volvo"
+console.log(Volvo)*/
+
+
+//Conditionals
+
+/*const x = 20;
+if(x == 10) {
+    console.log('x is 10');
+} else {
+    console.log('x is NOT 10');
+}*/
+
+/*const x = 20;
+if(x === 10){
+    console.log('x is 10');
+} else if (x > 10) {
+    console.log('x is greater than 10');
+} else {
+  console.log('x is less than 10');
+}*/
+
+/*const x = 4;
+const y = 16;
+if(x > 5 || y > 10){
+    console.log('x is more than 5 or y is more than 10');
+} */
+
+/*const x = 6;
+const y = 20;
+if(x > 5 && y > 10){
+    console.log('x is more than 5 or y is more than 10');
+} */
+
+/*const x = 12;
+const color = x > 10 ? 'red' : 'green';
+console.log(color); */
+
+const x = 15;
+const color = x > 10 ? 'red' : 'blue';
+switch(color){
+    case 'red' :
+        console.log('color is red');
+        break;
+    case 'blue':
+        console.log('color is blue');
+        break;
+    default:
+        console.log('color is NOT red or blue');
+        break;
 }
+
+/*function addNums(num1, num2){
+    console.log(num1+num2);
+}
+addNums(5, 3);*/
+
+/*const addNums = (num1=1, num2=1)=> {
+    return num1 + num2;
+}
+console.log(addNums(6,3));
+
+
+const addNums = (num1=1, num2=1)=>num1 + num2;
+
+console.log(addNums(6,4));*/
+
+const addNums = num1 => num1 + 6;
+
+console.log(addNums(6 ));
+
+
+//Constructor function
+function Person(firstName, lastName, dob){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = dob;
+}
+
+//Instantiate object
+const person1 = new Person('John', 'Doe', '3-02-2021');
+const person2 = new Person('Ada', 'Doe ', '3-02-2021');
+
+console.log(person1)
+
+
