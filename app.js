@@ -216,16 +216,94 @@ console.log(addNums(6 ));
 
 
 //Constructor function
-function Person(firstName, lastName, dob){
+/*function Person(firstName, lastName, dob){
     this.firstName = firstName;
     this.lastName = lastName;
-    this.dob = dob;
+    this.dob = new Date(dob);
 }
 
 //Instantiate object
 const person1 = new Person('John', 'Doe', '3-02-2021');
 const person2 = new Person('Ada', 'Doe ', '3-02-2021');
 
-console.log(person1)
+console.log(person1) */
+
+/*//Constructor function
+function Person(firstName, lastName, dob){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+    this.getBirthYear = function() {
+        return this.dob.getFullYear();
+    }
+    this.getFullName = function() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+//Instantiate object
+const person1 = new Person('John', 'Doe', '3-02-2021');
+const person2 = new Person('Ada', 'Doe ', '3-02-2012');
+
+console.log(person1.getBirthYear());
+console.log(person1.getFullName());*/
 
 
+/*//Constructor function
+function Person(firstName, lastName, dob){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+}
+Person.prototype.getBirthYear = function() {
+    return this.dob.getFullYear();
+}
+
+Person.prototype.getFullName = function(){
+    return `${this.firstName} ${this.lastName}`;
+}
+
+//Instantiate object
+const person1 = new Person('John', 'Doe', '3-02-2021');
+const person2 = new Person('Ada', 'Doe ', '3-02-2012');
+
+console.log(person2.getFullName());
+console.log(person1);*/
+ 
+
+/*//Constructor function
+function Person(firstName, lastName, dob){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+}
+Person.prototype.getBirthYear = function() {
+    return this.dob.getFullYear();
+}
+
+Person.prototype.getFullName = function(){
+    return `${this.firstName} ${this.lastName}`;
+}*/
+
+//class 
+class Person{
+    constructor(firstName, lastName, dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+    }
+
+    getBirthYear() {
+        return this.dob.getFullYear(); 
+    }
+    
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`; 
+    }
+}
+//Instantiate Object
+const person1 = new Person('John', 'Doe', '3-02-2021');
+const person2 = new Person('Ada', 'Doe ', '3-02-2012');
+
+console.log(person2.getFullName());
+console.log(person1);
